@@ -1,0 +1,79 @@
+list1 = [3, 6, True, -1, "abc", (1,2), [2,3], 6]
+print(len(list1))
+for i in range(len(list1)):
+    if type(list1[i])==tuple:
+        print(i)
+        break
+
+
+
+
+username = "Batman"
+password = "I am Batman"
+
+while True:
+    input_username = input("Enter a username: ")
+    input_password = input("Enter a password: ")
+   
+    if input_username != username:
+        if input_password != password:
+            print("Access denied: ")
+            
+    else:
+        print("Welcome")
+        break
+
+
+
+m = 4
+n = 4
+a = [[0 for i in range(m)] for i in range(n)]
+a
+
+
+
+a1 = [[2 for i in range(m)] for i in range(n)]
+a1[0][0] = 1
+a1[1][1] = 1
+a1[2][2] = 1
+a1[3][3] = 1
+a1
+
+
+
+
+import re 
+#A regular expression (or RE) specifies a set of strings that matches it; the functions in this 
+# module let you check if a particular string matches a given regular expression 
+#(or if a given regular expression matches a particular string, which comes down to the same thing).
+
+while True:
+    user_input = input("Enter a password: ")
+    is_valid = False 
+    if (len(user_input)<8):
+        print("Not valid ! Total characters should be at least 8")
+        continue
+    elif not re.search("[A-Z]",user_input): 
+#re.search(pattern, string, flags=0) Scan through string looking for the first location 
+# where the regular expression pattern produces a match.
+        print("Not valid ! It should contain at least on uppercase letter between [A-Z]")
+        continue
+    elif not re.search("[1-9]",user_input):
+        print("Not valid ! It should contain at least one number between [1-9]")
+        continue
+    else:
+        is_valid = True
+        break
+if(is_valid):
+    print("Password is valid")
+
+
+
+
+
+number = input("Enter a non-negative integer to take the factorial of: ")
+
+count = 1
+for i in range(int(number)):
+    count = count*(i + 1)
+print(count)
